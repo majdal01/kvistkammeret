@@ -1,0 +1,9 @@
+# Ignorer PHP fejl-logfiler
+error_log
+
+# Ignorer node-modules, hvis du bruger npm
+node_modules/
+
+# Ignorer IDE-specifikke filer
+.vscode/
+.DS_Store
