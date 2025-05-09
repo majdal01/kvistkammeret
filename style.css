@@ -1,0 +1,153 @@
+/*
+Theme Name: Kvistkammeret
+Theme URI: https://amberowldesign.dk
+Template: hello-elementor
+Author: Maja Lund Dalgaard
+Author URI: https://amberowldesign.dk
+Description: Tilpasset tema til Kvistkammeret
+Version: 1.0
+Tags: customized
+Version: 3.3.0.1744825193
+Updated: 2025-04-16 18:39:53
+
+*/
+
+/* Woocommerce styles */
+
+.woocommerce-loop-product__title {
+    font-family: 'open-sans', sans-serif !important;
+    font-size: 1.75rem !important;
+    font-weight: 500 !important;
+    line-height: 105% !important;
+}
+
+.wl-product-filter {
+    display: block;
+}
+
+/*Styling af sociale ikoner på produktsider*/
+
+/* Container til delingsikoner */
+.custom-share-icons {
+    margin-top: 2em;
+    display: flex;
+    gap: 1.2em;
+    align-items: center;
+    background-color: var(--mellem-primary-color);
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-share-icons p {
+    margin-right: 1em;
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+.custom-share-icons a {
+    color: #804A28; 
+    font-size: 2.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.custom-share-icons a:hover {
+    color: #38261C;
+}
+
+/* Skjul Compare og Wishlist ikoner */
+.shopengine-comparison,
+.shopengine-wishlist, .available-on-backorder {
+    display: none !important;
+}
+
+/* Knap-animation */
+/* Reference: https://codepen.io/kathykato/pen/rZRaNe */
+
+.custom-knap {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid #49694A;
+    border-radius: 50px;
+    vertical-align: middle;
+    text-decoration: none;
+    background: #49694A !important;
+    padding: 4px;
+    font-size: inherit;
+    font-family: inherit;
+    width: 10rem;
+    height: auto;
+  }
+  
+  .custom-knap .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #FDFDFC;
+    border-radius: 1.625rem;
+  }
+  
+  .custom-knap .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  
+  .custom-knap .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.45rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: #FDFDFC;
+  }
+  
+  .custom-knap .icon.arrow::before {
+    position: absolute;
+    content: '';
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #49694A;
+    border-right: 0.125rem solid #49694A;
+    transform: rotate(45deg);
+  }
+  
+  .custom-knap .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #FDFDFC ;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.22rem;
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  .custom-knap:hover .circle {
+    width: 100%;
+  }
+  
+  .custom-knap:hover .icon.arrow {
+    background: #49694A;
+    transform: translate(1rem, 0);
+  }
+  
+  .custom-knap:hover .button-text {
+    color: #49694A;
+  }
