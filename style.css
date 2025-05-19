@@ -12,6 +12,10 @@ Updated: 2025-04-16 18:39:53
 
 */
 
+html, body {
+  width: 100%;
+  overflow-x:hidden;
+}
 
 /* Woocommerce styles */
 
@@ -26,42 +30,6 @@ Updated: 2025-04-16 18:39:53
     display: block;
 }
 
-/*Styling af sociale ikoner på produktsider*/
-
-/* Container til delingsikoner */
-.custom-share-icons {
-    margin-top: 2em;
-    display: flex;
-    gap: 1.2em;
-    align-items: center;
-    background-color: var(--mellem-primary-color);
-    padding: 1em;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.custom-share-icons p {
-    margin-right: 1em;
-    font-size: 1.3rem;
-    color: var(--text-color);
-}
-
-.custom-share-icons a {
-    color: #804A28; 
-    font-size: 2.5rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.custom-share-icons a:hover {
-    color: #38261C;
-}
-
-/* Skjul Compare og Wishlist ikoner */
-.shopengine-comparison,
-.shopengine-wishlist, .available-on-backorder {
-    display: none !important;
-}
 
 /* Knap-animation */
 /* Reference: https://codepen.io/kathykato/pen/rZRaNe */
