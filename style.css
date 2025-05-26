@@ -121,27 +121,50 @@ html, body {
     color: #49694A;
   }
 
+
+/* Responsive styles */
   @media (max-width: 1024px) {
-    .custom-knap {
-      padding: 4px 4px 4px 8px !important;
-    } 
-    
-    .custom-knap .circle {
-      background: #49694A !important;
-      transition: none !important;
-    }
-     .custom-knap .icon.arrow::before {
-      border-top: 0.125rem solid #FDFDFC !important;
-      border-right: 0.125rem solid #FDFDFC !important;
-    }
-    .custom-knap:hover .icon.arrow {
-      background: #FDFDFC !important;
-      transform: translate(0, 0) !important;
-      
-    }
-    .custom-knap:hover .button-text {
-    color: #FDFDFD;
-    transform: scale(1.1);
-    margin-left: 1rem;
+  .custom-knap {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4px 8px !important;
+    text-decoration: none !important;
   }
+
+  .custom-knap .circle {
+    order: 2;
+    margin-left: 0;
+    width: 2rem !important;
+    background: #49694A !important;
+    transition: none !important;
   }
+
+  .custom-knap:hover .circle {
+    width: 2rem !important;
+  }
+
+  .custom-knap .button-text {
+    position: static;
+    margin: 0;
+    color: #FDFDFC;
+    font-size: 1.1rem;
+    text-decoration: none !important;
+    margin-left: 0.680rem !important;
+  }
+
+  .custom-knap:hover .button-text {
+    color: #FDFDFC;
+    transform: scale(1.05);
+  }
+
+  .custom-knap .icon.arrow::before {
+    border-top: 0.125rem solid #FDFDFC !important;
+    border-right: 0.125rem solid #FDFDFC !important;
+  }
+
+  .custom-knap:hover .icon.arrow {
+    background: #FDFDFC !important;
+    transform: none !important;
+  }
+}
