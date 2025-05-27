@@ -168,3 +168,77 @@ html, body {
     transform: none !important;
   }
 }
+ */
+
+/* Styling af variationer på produktside */
+
+.variations .label,.variations .value {
+  border-radius: 0.5rem !important;
+}
+
+.variations {
+  border-radius: 0.5rem !important;
+  margin-bottom: 0 !important;
+}
+
+.variations .label {
+    text-align: left !important;
+}
+
+.variations .value {
+  line-height: 1rem !important;
+}
+
+
+/* Ændring af inputfelt på produktside */
+
+.wcpa_field_wrap {
+  display: grid !important;
+  grid-template-columns: auto 1fr !important;
+  grid-template-areas:
+    "label field"
+    ". error" !important;
+  column-gap: 0.8rem !important;
+  align-items: center !important;
+  padding: 1rem 0 !important;
+}
+
+.wcpa_field_label {
+  font-family: 'DM Sans', sans-serif !important;
+  line-height: 1.5rem !important;
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+  font-weight: 600 !important;
+  text-align: left !important;
+  grid-area: label !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+}
+
+.wcpa_field {
+    display: flex !important;
+    margin: 0 1rem !important;
+    width: 92% !important;
+    border-color: #38261C !important;
+    text-transform: uppercase !important;
+    grid-area: field !important;
+    height: 2.7rem !important;
+    padding-top: 0.5rem !important;
+}
+
+.wcpa_field_bottom {
+  grid-area: error !important;
+  margin-top: 0.25rem !important;
+  margin-left: 1rem !important;
+}
+
+.wcpa_field_error p {
+  color: #d9534f; 
+  font-size: 1.2rem !important;
+  margin-top: 0.5rem !important;
+}
+
+#textarea_5070532461 {
+  padding-top: 0 !important;
+}
+
