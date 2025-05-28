@@ -179,14 +179,21 @@ html, body {
 .variations {
   border-radius: 0.5rem !important;
   margin-bottom: 0 !important;
+  background-color: #FDFDFD !important;
 }
 
 .variations .label {
     text-align: left !important;
+    background-color: #FDFDFD !important;
 }
 
 .variations .value {
   line-height: 1rem !important;
+  background-color: #FDFDFD !important;
+}
+
+.variations_form .cart .th-var-active {
+  background-color: #FDFDFD !important;
 }
 
 
@@ -201,6 +208,7 @@ html, body {
   column-gap: 0.8rem !important;
   align-items: center !important;
   padding: 1rem 0 !important;
+  background-color: #FDFDFD !important;
 }
 
 .wcpa_field_label {
@@ -240,5 +248,48 @@ html, body {
 
 #textarea_5070532461 {
   padding-top: 0 !important;
+}
+
+/*Ændring af besked når produkt er tilføjet til kurv*/
+.woocommerce-notices-wrapper {
+  width: 100% !important;
+  background-color: #49694A !important;
+  padding: 0 1rem !important;
+}
+
+.woocommerce-message {
+  background-color: #49694A !important;
+  color: #FDFDFC !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 1.3rem !important;
+  padding: 1rem !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+  max-width: 1140px !important;
+  width: 100% !important;
+  justify-content: space-between !important;
+  border-top: none !important;
+  text-align: center !important;
+}
+
+.woocommerce-message::before {
+  color: #FDFDFC !important;
+}
+
+.woocommerce-message a.button {
+  background-color: #FDFDFC !important;
+  color: #49694A !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 1.3rem !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.5rem !important;
+  text-decoration: none !important;
+  border: 1px solid #FDFDFC !important;
+}
+
+.woocommerce-message a.button:hover {
+    background-color: #49694A !important;
+    color: #FDFDFD !important;
+    border: 1px solid #FDFDFD !important;
 }
 

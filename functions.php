@@ -51,4 +51,3 @@ function kvistkammeret_enqueue_accessibility_script() {
 add_action('wp_enqueue_scripts', 'kvistkammeret_enqueue_accessibility_script');
 
 
-
