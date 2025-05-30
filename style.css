@@ -180,6 +180,7 @@ html, body {
   border-radius: 0.5rem !important;
   margin-bottom: 0 !important;
   background-color: #FDFDFD !important;
+  gap: 1rem !important;
 }
 
 .variations .label {
@@ -194,6 +195,26 @@ html, body {
 
 .variations_form .cart .th-var-active {
   background-color: #FDFDFD !important;
+}
+
+/*Ændring af styling på specifikationer */
+
+.woocommerce-product-attributes .shop_attributes {
+  background-color: #FDFDFD !important;
+}
+
+.woocommerce-product-attributes-item__label {
+  text-align: left !important;
+  line-height: 1.2rem !important;
+  background-color: #FDFDFD !important;
+  border-bottom: 0.8px solid #787564 !important;
+}
+
+.woocommerce-product-attributes-item__value {
+  padding-left: 1rem !important;
+  line-height: 1.2rem !important;
+  background-color: #FDFDFD !important;
+  border-bottom: 0.8px solid #787564 !important;
 }
 
 
@@ -240,6 +261,7 @@ html, body {
   margin-left: 1rem !important;
 }
 
+
 .wcpa_field_error p {
   color: #d9534f; 
   font-size: 1.2rem !important;
@@ -265,6 +287,10 @@ html, body {
 .bamse .wcpa_field_label {
   padding-left: 0 !important;
   padding-bottom: 0.5rem !important;
+}
+
+.quantity {
+  margin-left: 1.5rem !important;
 }
 
 /*Ændring af besked når produkt er tilføjet til kurv*/
