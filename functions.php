@@ -51,3 +51,24 @@ function kvistkammeret_enqueue_accessibility_script() {
 add_action('wp_enqueue_scripts', 'kvistkammeret_enqueue_accessibility_script');
 
 
+/*Tilføjer en funktion der beregner 5% af prisen til donation*/
+add_shortcode('live_donation_amount', function() {
+    return '<p id="donation-amount" style="margin-top: 1em;"></p>';
+});
+
+add_action('wp', 'enqueue_donation_script_on_product_page');
+
+function enqueue_donation_script_on_product_page() {
+    if (is_product()) {
+        add_action('wp_enqueue_scripts', function() {
+            wp_enqueue_script(
+                'custom-donation-script',
+                get_stylesheet_directory_uri() . '/js/donation.js',
+                array('jquery'),
+                '1.0',
+                true
+            );
+        });
+    }
+}
+
