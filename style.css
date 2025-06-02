@@ -183,9 +183,19 @@ html, body {
   gap: 1rem !important;
 }
 
+@media (max-width: 480px) {
+  .variations {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto auto !important;
+    gap: 0.5rem !important;
+  }
+}
+
 .variations .label {
     text-align: left !important;
     background-color: #FDFDFD !important;
+    padding-left: 0 !important;
 }
 
 .variations .value {
@@ -226,17 +236,32 @@ html, body {
   grid-template-areas:
     "label field"
     ". error" !important;
-  column-gap: 0.8rem !important;
+  column-gap: 0.2rem !important;
   align-items: center !important;
   padding: 1rem 0 !important;
   background-color: #FDFDFD !important;
 }
 
+@media (max-width: 480px) {
+  .wcpa_field_wrap {
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "label"
+      "field"
+      "error" !important;
+    padding: 0.5rem 0 !important;
+  }
+  .wcpa_field {
+    justify-self: left !important;
+    margin-top: 0,5rem !important;
+  }
+}
+
 .wcpa_field_label {
   font-family: 'DM Sans', sans-serif !important;
+  font-size: 1.4rem !important;
   line-height: 1.5rem !important;
   padding-right: 1rem !important;
-  padding-left: 1rem !important;
   font-weight: 600 !important;
   text-align: left !important;
   grid-area: label !important;
@@ -247,12 +272,13 @@ html, body {
 .wcpa_field {
     display: flex !important;
     margin: 0 1rem !important;
-    width: 92% !important;
+    width: 85% !important;
     border-color: #38261C !important;
     text-transform: uppercase !important;
     grid-area: field !important;
     height: 2.7rem !important;
     padding-top: 0.5rem !important;
+    justify-self: right !important;
 }
 
 .wcpa_field_bottom {
@@ -287,10 +313,6 @@ html, body {
 .bamse .wcpa_field_label {
   padding-left: 0 !important;
   padding-bottom: 0.5rem !important;
-}
-
-.quantity {
-  margin-left: 1.5rem !important;
 }
 
 /*Ændring af besked når produkt er tilføjet til kurv*/
@@ -340,3 +362,12 @@ html, body {
     border: 1px solid #FDFDFD !important;
 }*/
 
+
+@media (max-width: 480px) {
+  .elementor-widget-woocommerce-cart .woocommerce table.cart tr  {
+    padding: 0 !important;
+  }
+  .elementor-widget-woocommerce-cart .e-cart-section {
+    padding: 1rem !important;
+  }
+}
