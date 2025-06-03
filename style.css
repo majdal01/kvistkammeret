@@ -364,9 +364,18 @@ html, body {
 
 /* Styling af donation*/
 
-.klimatrae-donation-info {
-    color: #2f7d32; /* grøn farve */
+.klimatrae-donation-cart {
+    color: #49694A ; /* grøn farve */
     font-style: italic;
+    font-size: 1.2rem !important;
+    text-align: center !important;
+}
+
+.klimatrae-donation-checkout {
+    color: #49694A ; /* grøn farve */
+    font-style: italic;
+    font-size: 1.2rem !important;
+    text-align: center !important;
 }
 
 

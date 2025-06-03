@@ -56,7 +56,7 @@ add_action('woocommerce_after_cart_totals', 'kvistkammeret_donation_info_cart');
 function kvistkammeret_donation_info_cart() {
     $subtotal = WC()->cart->get_subtotal();
     $donation = round($subtotal * 0.05, 2);
-    echo '<p class="klimatrae-donation-info" style="margin-top: 1em; font-size: 0.9em;">';
+    echo '<p class="klimatrae-donation-cart" style="margin-top: 1em; font-size: 0.9em;">';
     echo 'Du donerer 5 % til Klimatræ: <strong>' . wc_price($donation) . '</strong>';
     echo '</p>';
 }
@@ -65,7 +65,7 @@ add_action('woocommerce_review_order_after_submit', 'kvistkammeret_donation_info
 function kvistkammeret_donation_info_checkout() {
     $subtotal = WC()->cart->get_subtotal();
     $donation = round($subtotal * 0.05, 2);
-    echo '<p class="klimatrae-donation-info" style="margin-top: 1em; font-size: 0.9em;">';
+    echo '<p class="klimatrae-donation-checkout" style="margin-top: 1em; font-size: 0.9em;">';
     echo 'Du donerer 5 % til Klimatræ: <strong>' . wc_price($donation) . '</strong>';
     echo '</p>';
 }
