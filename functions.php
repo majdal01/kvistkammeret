@@ -51,24 +51,22 @@ function kvistkammeret_enqueue_accessibility_script() {
 add_action('wp_enqueue_scripts', 'kvistkammeret_enqueue_accessibility_script');
 
 
-/*Tilføjer en funktion der beregner 5% af prisen til donation*/
-add_shortcode('live_donation_amount', function() {
-    return '<p id="donation-amount" style="margin-top: 1em;"></p>';
-});
+// Vis 5% donation som info i kurv og checkout
+add_action('woocommerce_after_cart_totals', 'kvistkammeret_donation_info_cart');
+function kvistkammeret_donation_info_cart() {
+    $subtotal = WC()->cart->get_subtotal();
+    $donation = round($subtotal * 0.05, 2);
+    echo '<p class="klimatrae-donation-info" style="margin-top: 1em; font-size: 0.9em;">';
+    echo 'Du donerer 5 % til Klimatræ: <strong>' . wc_price($donation) . '</strong>';
+    echo '</p>';
+}
 
-add_action('wp', 'enqueue_donation_script_on_product_page');
-
-function enqueue_donation_script_on_product_page() {
-    if (is_product()) {
-        add_action('wp_enqueue_scripts', function() {
-            wp_enqueue_script(
-                'custom-donation-script',
-                get_stylesheet_directory_uri() . '/js/donation.js',
-                array('jquery'),
-                '1.0',
-                true
-            );
-        });
-    }
+add_action('woocommerce_review_order_after_submit', 'kvistkammeret_donation_info_checkout');
+function kvistkammeret_donation_info_checkout() {
+    $subtotal = WC()->cart->get_subtotal();
+    $donation = round($subtotal * 0.05, 2);
+    echo '<p class="klimatrae-donation-info" style="margin-top: 1em; font-size: 0.9em;">';
+    echo 'Du donerer 5 % til Klimatræ: <strong>' . wc_price($donation) . '</strong>';
+    echo '</p>';
 }
 

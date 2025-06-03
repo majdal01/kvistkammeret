@@ -362,6 +362,13 @@ html, body {
     border: 1px solid #FDFDFD !important;
 }*/
 
+/* Styling af donation*/
+
+.klimatrae-donation-info {
+    color: #2f7d32; /* grøn farve */
+    font-style: italic;
+}
+
 
 @media (max-width: 480px) {
   .elementor-widget-woocommerce-cart .woocommerce table.cart tr  {
