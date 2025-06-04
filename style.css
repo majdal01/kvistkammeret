@@ -168,7 +168,10 @@ html, body {
     transform: none !important;
   }
 }
- */
+
+
+
+
 
 /* Styling af variationer på produktside */
 
@@ -183,19 +186,14 @@ html, body {
   gap: 1rem !important;
 }
 
-@media (max-width: 480px) {
-  .variations {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    grid-template-rows: auto auto !important;
-    gap: 0.5rem !important;
-  }
-}
-
 .variations .label {
     text-align: left !important;
     background-color: #FDFDFD !important;
     padding-left: 0 !important;
+}
+
+table.variations label {
+  line-height: 1.2 !important;
 }
 
 .variations .value {
@@ -206,6 +204,23 @@ html, body {
 .variations_form .cart .th-var-active {
   background-color: #FDFDFD !important;
 }
+
+@media (max-width: 480px) {
+    table.variations tr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 0.5rem !important;
+    padding: 0 !important;
+  }
+  .variations .label, .variations .value {
+    padding: 0 !important;
+  }
+  .variations .label {
+   margin-top: 1rem !important;
+  }
+}
+
 
 /*Ændring af styling på specifikationer */
 
@@ -228,6 +243,8 @@ html, body {
 }
 
 
+
+
 /* Ændring af inputfelt på produktside */
 
 .wcpa_field_wrap {
@@ -242,20 +259,6 @@ html, body {
   background-color: #FDFDFD !important;
 }
 
-@media (max-width: 480px) {
-  .wcpa_field_wrap {
-    grid-template-columns: 1fr !important;
-    grid-template-areas:
-      "label"
-      "field"
-      "error" !important;
-    padding: 0.5rem 0 !important;
-  }
-  .wcpa_field {
-    justify-self: left !important;
-    margin-top: 0,5rem !important;
-  }
-}
 
 .wcpa_field_label {
   font-family: 'DM Sans', sans-serif !important;
@@ -297,6 +300,29 @@ html, body {
 #textarea_5070532461 {
   padding-top: 0 !important;
 }
+
+
+@media (max-width: 480px) {
+  .wcpa_field_wrap {
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "label"
+      "field"
+      "error" !important;
+    padding: 0.5rem 0 !important;
+  }
+  .wcpa_field {
+    justify-self: left !important;
+    margin-left: 0 !important;
+    margin-top: 0.6rem !important;
+  }
+  #textarea_5070532461 {
+    margin-bottom: 0 !important;
+  }
+}
+
+
+
 
 .bamse {
   display: flex !important;
@@ -376,6 +402,10 @@ html, body {
     font-style: italic;
     font-size: 1.2rem !important;
     text-align: center !important;
+}
+
+.restore-item {
+  color: #FDFDFC !important;
 }
 
 

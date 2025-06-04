@@ -70,3 +70,12 @@ function kvistkammeret_donation_info_checkout() {
     echo '</p>';
 }
 
+/*Cookiebot*/
+
+function add_usercentrics_cookie_script() {
+    echo '
+    <script src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"></script>
+    <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="bGjSKkxQy2Nvke" async></script>
+    ';
+}
+add_action('wp_head', 'add_usercentrics_cookie_script');
