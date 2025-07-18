@@ -417,3 +417,9 @@ table.variations label {
     padding: 1rem !important;
   }
 }
+
+/*Woocommerce - skal udfyldes på varianter*/
+.variations label:after {
+  content: ' *';
+  color: red;
+}
