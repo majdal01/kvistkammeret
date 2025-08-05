@@ -51,6 +51,22 @@ function kvistkammeret_enqueue_accessibility_script() {
 add_action('wp_enqueue_scripts', 'kvistkammeret_enqueue_accessibility_script');
 
 
+/*Sender ordrebekræftelse til kundens e-mail*/
+
+add_action('woocommerce_checkout_order_processed', 'custom_force_order_confirmation_email', 20, 1);
+function custom_force_order_confirmation_email($order_id) {
+    if (!$order_id) return;
+
+    $order = wc_get_order($order_id);
+    
+    // Send kun hvis mailen ikke allerede er sendt
+    if ($order && !$order->get_date_paid()) {
+        // Tving WooCommerce til at sende ordrebekræftelsesmailen
+        WC()->mailer()->get_emails()['WC_Email_Customer_Processing_Order']->trigger($order_id);
+    }
+}
+
+
 
 /*Cookiebot*/
 /*
