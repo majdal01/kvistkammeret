@@ -66,8 +66,6 @@ function custom_force_order_confirmation_email($order_id) {
     }
 }
 
-
-
 /*Cookiebot*/
 /*
 function add_usercentrics_cookie_script() {

@@ -130,22 +130,35 @@ html, body {
 
  /* Takkeside */
 
- .elementor-heading-title.elementor-size-default {
-  display: none !important;
-}
+
 
 .custom-thankyou-page {
-  background: #f8f8f8;
+  background: #F5F3ED !important;
   padding: 40px;
   border-radius: 12px;
   max-width: 700px;
   margin: 40px auto;
-  text-align: center;
+  text-align: left;
+}
+
+.custom-thankyou-page h2 {
+  padding-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 .thankyou-headline {
-  font-size: 2rem;
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
   margin-bottom: 1rem;
+}
+
+.thankyou-text, .thankyou-confirmation {
+  font-family: 'open-sans', sans-serif !important;
+  line-height: 125% !important;
+  font-size: 1.2rem !important;
+  padding-bottom: 1rem !important;
+  color: #38261C !important;
 }
 
 .thankyou-order-details {
@@ -154,8 +167,38 @@ html, body {
   margin: 2rem 0;
 }
 
+.custom-order-items li{
+  font-family: 'open-sans', sans-serif !important;
+  font-size: 1.2rem !important;
+  color: #49694A !important;
+  margin-bottom: 0.5rem;
+}
+
 .thankyou-order-details li {
   margin-bottom: 0.5rem;
+  font-family: 'open-sans', sans-serif !important;
+  font-size: 1.2rem !important;
+  color: #38261C !important;
+}
+
+.button-tak {
+  background-color: none !important;
+  border: 2px solid #49694A !important;
+  border-radius: 25px !important;
+  padding: 0.5rem 1rem !important;
+  text-decoration: none !important;
+  font-size: 1.2rem !important;
+  font-family: 'open-sans', sans-serif !important;
+}
+
+.button-tak:hover {
+  background-color: #49694A !important;
+  color: #FDFDFC !important;
+  text-decoration: none !important;
+}
+
+.page-id-10 h1.elementor-heading-title {
+  display: none !important;
 }
 
 
@@ -411,36 +454,22 @@ table.variations label {
 
 .woocommerce-message a.button {
   display: none !important;
-  /*background-color: #FDFDFC !important;
-  color: #49694A !important;
-  font-family: 'DM Sans', sans-serif !important;
-  font-size: 1.3rem !important;
-  padding: 0.5rem 1rem !important;
-  border-radius: 0.5rem !important;
-  text-decoration: none !important;
-  border: 1px solid #FDFDFC !important;*/
-}
-/*
-.woocommerce-message a.button:hover {
-    background-color: #49694A !important;
-    color: #FDFDFD !important;
-    border: 1px solid #FDFDFD !important;
-}*/
-
-/* Styling af donation*/
-
-.klimatrae-donation-cart {
-    color: #49694A ; /* grøn farve */
-    font-style: italic;
-    font-size: 1.2rem !important;
-    text-align: center !important;
 }
 
-.klimatrae-donation-checkout {
-    color: #49694A ; /* grøn farve */
-    font-style: italic;
-    font-size: 1.2rem !important;
-    text-align: center !important;
+.woocommerce-info::before {
+  color: #FDFDFC !important;
+}
+
+.wc-backward {
+  margin-top: 2rem !important;
+  background-color: #FDFDFC !important;
+  border: 1px solid #49694A !important;
+  border-radius: 25px !important;
+}
+
+.wc-backward:hover {
+  background-color: #49694A !important;
+  color: #FDFDFC !important;
 }
 
 .restore-item {

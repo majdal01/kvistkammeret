@@ -6,7 +6,9 @@ if ( $order ) : ?>
     <section class="custom-thankyou-page">
 
         <h1 class="thankyou-headline">Tak for din bestilling!</h1>
-        <p class="thankyou-text">Jeg har modtaget din ordre. Du finder oversigten herunder.</p>
+        <p class="thankyou-text">Jeg har modtaget din ordre og glæder mig til at skære smukt træ til dig. Hvis jeg har spørgsmål til din ordre, kontakter jeg dig, inden jeg går igang. </p>
+
+        <hr>
 
         <h2>Din ordre indeholder:</h2>
         <ul class="custom-order-items">
@@ -41,9 +43,9 @@ if ( $order ) : ?>
                 <li><strong>Betaling:</strong> <?php echo wp_kses_post( $order->get_payment_method_title() ); ?></li>
             </ul>
 
-            <p>Du vil modtage en e-mail med ordrebekræftelse.</p>
+            <p class="thankyou-confirmation">Du vil modtage en e-mail med ordrebekræftelsen.</p>
 
-            <a href="<?php echo esc_url( wc_get_page_permalink( 'shop' ) ); ?>" class="button">Tilbage til shoppen</a>
+            <a href="<?php echo esc_url( wc_get_page_permalink( 'shop' ) ); ?>" class="button-tak">Tilbage til shoppen</a>
 
         <?php endif; ?>
 
